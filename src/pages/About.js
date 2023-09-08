@@ -1,5 +1,6 @@
 import React from 'react'
 import img from "../img/about-img.png"
+import { Link } from "react-router-dom"
 
 
 const About = () => {
@@ -25,9 +26,10 @@ const About = () => {
                 Your van is ready.
               </div>
     
-              <button>
-                <span>Explore our vans</span>
-              </button>
+
+              <Link to="/vans">
+                <button>Explore our vans</button>
+              </Link>
             </div>
           </div>
         </section>

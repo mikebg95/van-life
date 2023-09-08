@@ -3,7 +3,22 @@
 
 // @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@500&display=swap');
+
+@mixin custom-btn($border-radius, $text-color, $bg-color, $font-size, $font-weight, $line-height, $padding) {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: $border-radius;
+    color: $text-color;
+    padding: $padding;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    background-color: $bg-color;
+    padding: $padding;
+}
 
 * {
     box-sizing: border-box;
@@ -86,16 +101,8 @@ body {
         }
 
         button {
-            background-color: #FF8C38;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 32px;
-            padding: 10px 20px;
+            @include custom-btn(5px, white, #FF8C38, 16px, 700, 32px, 10px 20px);
             margin-top: 52px;
-            cursor: pointer;
             width: 100%;
         }
     }
@@ -149,21 +156,205 @@ body {
             }
 
             button {
-                background-color: #161616;
-                border-radius: 10px;
-                color: white;
-                padding: 12px 22px;
+                @include custom-btn(10px, white, #161616, 16px, 700, 24px, 12px 22px);
                 margin-top: 25px;
-                cursor: pointer;
-
-                span {
-                    font-size: 16px;
-                    font-weight: 700;
-                    line-height: 24px;
-                }
             }
         }
 
+    }
+
+    .Vans {
+        padding: 54px 26px 84px 26px;
+
+        .title {
+            color: #161616;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 34px;
+
+        }
+
+        .filters {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0 56px 0;
+
+            button {
+                background-color: #FFEAD0;
+                border-radius: 5px;
+                padding: 6px 26px;
+                cursor: pointer;
+                border: none;
+                outline: none;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                color: #4D4D4D;
+            }
+
+            .clear-btn {
+                background-color: transparent;
+                text-decoration: underline;
+                // color: white;
+            }
+        }
+
+        .vans {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 34px;
+
+            a {
+                text-decoration: none;
+            }
+
+            .Van {
+                .img-container {
+                    height: 230px;
+                    width: 230px;
+                    overflow: hidden;
+
+                    img {
+                        height: 100%;
+                        position: relative;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        object-fit: cover;
+                    }
+                }
+
+                .info {
+                    margin-top: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    color: #161616;
+                    font-size: 20px;
+                    line-height: 32px;
+
+                    .name {
+                        font-weight: 600;
+                    }
+
+                    .cost {
+                        display: flex;
+                        flex-direction: column;
+
+                        .price {
+                            font-weight: 600;
+                        }
+                        .time {
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 14px;
+                            text-align: right;
+                            vertical-align: top;
+                            font-weight: 500;
+                            line-height: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .VanDetail {
+        padding: 40px 24px 84px 24px;
+
+        .back {
+            display: flex;
+            align-items: center;
+
+            svg {
+                color: #858585;
+                margin-right: 10px;
+                font-size: 20px;
+            }
+
+            span {
+                font-size: 16px;
+                font-weight: 500;
+                color: #201F1D;
+            }
+        }
+
+        .img-container {
+            margin: 40px 0 50px 0;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                object-fit: cover;
+            }
+        }
+
+        .name {
+            margin: 24px 0 10px;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 34px;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 44px;;
+        }
+
+        .time {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 44px;
+        }
+
+        .description {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            margin: 10px 0 22px;
+        }
+
+        .rent-btn {
+            @include custom-btn(5px, white, #FF8C38, 18px, 700, 32px, 10px 0);
+            width: 100%;
+        }
+    }
+
+    .van-type {
+        font-family: "Inter", sans-serif;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        color: #FFEAD0;
+        padding: 3px 14px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 32px;
+        background-color: #E17654;
+        cursor: pointer;
+
+        &.simple {
+            background-color: #E17654;
+        }
+
+        &.rugged {
+            background-color: #115E59;
+        }
+
+        &.luxury {
+            background-color: #161616;
+        }
+    }
+
+    .loading {
+        margin-left: 28px;
+        margin-bottom: 40px;
     }
 }
 

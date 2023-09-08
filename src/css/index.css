@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@500&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -67,16 +67,19 @@ body {
   line-height: 24px;
 }
 .App .Home button {
-  background-color: #FF8C38;
   border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
   border-radius: 5px;
   color: white;
+  padding: 10px 20px;
   font-size: 16px;
   font-weight: 700;
   line-height: 32px;
+  background-color: #FF8C38;
   padding: 10px 20px;
   margin-top: 52px;
-  cursor: pointer;
   width: 100%;
 }
 .App .About {
@@ -121,15 +124,189 @@ body {
   line-height: 30px;
 }
 .App .About .colored-block button {
-  background-color: #161616;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
   border-radius: 10px;
   color: white;
   padding: 12px 22px;
-  margin-top: 25px;
-  cursor: pointer;
-}
-.App .About .colored-block button span {
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
+  background-color: #161616;
+  padding: 12px 22px;
+  margin-top: 25px;
+}
+.App .Vans {
+  padding: 54px 26px 84px 26px;
+}
+.App .Vans .title {
+  color: #161616;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 34px;
+}
+.App .Vans .filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0 56px 0;
+}
+.App .Vans .filters button {
+  background-color: #FFEAD0;
+  border-radius: 5px;
+  padding: 6px 26px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #4D4D4D;
+}
+.App .Vans .filters .clear-btn {
+  background-color: transparent;
+  text-decoration: underline;
+}
+.App .Vans .vans {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 34px;
+}
+.App .Vans .vans a {
+  text-decoration: none;
+}
+.App .Vans .vans .Van .img-container {
+  height: 230px;
+  width: 230px;
+  overflow: hidden;
+}
+.App .Vans .vans .Van .img-container img {
+  height: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+.App .Vans .vans .Van .info {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: #161616;
+  font-size: 20px;
+  line-height: 32px;
+}
+.App .Vans .vans .Van .info .name {
+  font-weight: 600;
+}
+.App .Vans .vans .Van .info .cost {
+  display: flex;
+  flex-direction: column;
+}
+.App .Vans .vans .Van .info .cost .price {
+  font-weight: 600;
+}
+.App .Vans .vans .Van .info .cost .time {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  text-align: right;
+  vertical-align: top;
+  font-weight: 500;
+  line-height: 1;
+}
+.App .VanDetail {
+  padding: 40px 24px 84px 24px;
+}
+.App .VanDetail .back {
+  display: flex;
+  align-items: center;
+}
+.App .VanDetail .back svg {
+  color: #858585;
+  margin-right: 10px;
+  font-size: 20px;
+}
+.App .VanDetail .back span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #201F1D;
+}
+.App .VanDetail .img-container {
+  margin: 40px 0 50px 0;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+.App .VanDetail .img-container img {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+.App .VanDetail .name {
+  margin: 24px 0 10px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 34px;
+}
+.App .VanDetail .price {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 44px;
+}
+.App .VanDetail .time {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 44px;
+}
+.App .VanDetail .description {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 10px 0 22px;
+}
+.App .VanDetail .rent-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  background-color: #FF8C38;
+  padding: 10px 0;
+  width: 100%;
+}
+.App .van-type {
+  font-family: "Inter", sans-serif;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #FFEAD0;
+  padding: 3px 14px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 32px;
+  background-color: #E17654;
+  cursor: pointer;
+}
+.App .van-type.simple {
+  background-color: #E17654;
+}
+.App .van-type.rugged {
+  background-color: #115E59;
+}
+.App .van-type.luxury {
+  background-color: #161616;
+}
+.App .loading {
+  margin-left: 28px;
+  margin-bottom: 40px;
 }
