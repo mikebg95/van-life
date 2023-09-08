@@ -20,6 +20,11 @@
     padding: $padding;
 }
 
+@mixin selected() {
+    color: #161616;
+    text-decoration: underline;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -64,9 +69,14 @@ body {
                 text-decoration: none;
                 margin-left: 20px;
 
-                
+                &:hover {
+                    @include selected();
+                }
             }
-            
+        }
+
+        .selected {
+            @include selected();
         }
     }
 
@@ -191,6 +201,10 @@ body {
                 font-weight: 500;
                 line-height: 24px;
                 color: #4D4D4D;
+
+                &.selected {
+                    background-color: #FFC89F;
+                }
             }
 
             .clear-btn {

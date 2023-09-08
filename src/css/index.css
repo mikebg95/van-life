@@ -39,6 +39,14 @@ body {
   text-decoration: none;
   margin-left: 20px;
 }
+.App .Header .links a:hover {
+  color: #161616;
+  text-decoration: underline;
+}
+.App .Header .selected {
+  color: #161616;
+  text-decoration: underline;
+}
 .App .Footer {
   background-color: #252525;
   color: #AAA;
@@ -164,6 +172,9 @@ body {
   font-weight: 500;
   line-height: 24px;
   color: #4D4D4D;
+}
+.App .Vans .filters button.selected {
+  background-color: #FFC89F;
 }
 .App .Vans .filters .clear-btn {
   background-color: transparent;
