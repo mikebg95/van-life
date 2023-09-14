@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 import { Outlet } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
-const HostVanDetailLayout = () => {
+const HostVanDetail = () => {
     const [van, setVan] = useState(null)
     const { id } = useParams()
 
@@ -71,7 +71,7 @@ const HostVanDetailLayout = () => {
           </NavLink>
         </nav>
 
-        <Outlet />
+        <Outlet context={van} />
       </section>}
 
       {!van && <div className="loading">Loading van...</div>}
@@ -79,4 +79,4 @@ const HostVanDetailLayout = () => {
   )
 }
 
-export default HostVanDetailLayout
+export default HostVanDetail

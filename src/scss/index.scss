@@ -185,7 +185,7 @@ body {
 
         .filters {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
             margin: 30px 0 56px 0;
 
@@ -200,6 +200,7 @@ body {
                 font-weight: 500;
                 line-height: 24px;
                 color: #4D4D4D;
+                margin-right: 15px;
 
                 &.selected {
                     background-color: #FFC89F;
@@ -209,6 +210,9 @@ body {
             .clear-btn {
                 background-color: transparent;
                 text-decoration: underline;
+                margin-left: auto;
+                padding: 0;
+
                 // color: white;
             }
         }
@@ -536,8 +540,50 @@ body {
                     margin: 0 0 30px 0;
                 }
 
-                .HostVanDetailPricing {
+                .HostVanInfo {
+                    .title {
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 22px;
+                        margin-bottom: 15px;
+
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+                .HostVanPricing {
                     margin-top: 15px;
+
+                    div {
+                        font-size: 24px;
+                        color: #161616;
+                        font-weight: 500;
+                        line-height: 22px;
+
+                        span {
+                            color: #4D4D4D;
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                .HostVanPhotos {
+                    .img-container {
+                        width: 100px;
+                        height: 100px;
+                        overflow: hidden;
+
+                        img {
+                            height: 100%;
+                            position: relative;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            object-fit: cover;
+                        }
+                    }
                 }
             }
         }

@@ -6,7 +6,7 @@ const Van = ({ van }) => {
     const { id, imageUrl, name, price, type } = van
 
     return (
-        <NavLink to={`/vans/${id}`}>
+        <NavLink to={id}>
             <section className="Van">
                 <div className="img-container">
                     <img src={imageUrl} alt={name} />
