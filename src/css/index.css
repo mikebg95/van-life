@@ -385,7 +385,7 @@ body {
 }
 .App .HostLayout .HostVanDetail .back {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   cursor: pointer;
   margin-bottom: 37px;
@@ -409,7 +409,7 @@ body {
 }
 .App .HostLayout .HostVanDetail .content .top {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .App .HostLayout .HostVanDetail .content .top .img-container {
   height: 160px;
@@ -476,8 +476,8 @@ body {
 }
 .App .HostLayout .Reviews .top {
   display: flex;
-  justify-content: start;
-  align-items: end;
+  justify-content: flex-start;
+  align-items: flex-end;
   margin-bottom: 32px;
 }
 .App .HostLayout .Reviews .top .title {
@@ -499,7 +499,7 @@ body {
 }
 .App .HostLayout .Reviews .overview {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 26px;
 }
@@ -517,7 +517,7 @@ body {
 .App .HostLayout nav {
   margin: 36px 0 45px 32px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 45px;
 }
@@ -581,7 +581,7 @@ body {
 .App .HostLayout .Dashboard .dashboard-reviews .score-section {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .App .HostLayout .Dashboard .dashboard-reviews .score-section .text {
   font-size: 24px;

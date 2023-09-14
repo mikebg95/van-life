@@ -451,7 +451,7 @@ body {
 
             .back {
                 display: flex;
-                justify-content: start;
+                justify-content: flex-start;
                 align-items: center;
                 cursor: pointer;
                 margin-bottom: 37px;
@@ -478,7 +478,7 @@ body {
 
                 .top {
                     display: flex;
-                    justify-content: start;
+                    justify-content: flex-start;
                     // align-items: center;
 
                     .img-container {
@@ -547,8 +547,8 @@ body {
 
             .top {
                 display: flex;
-                justify-content: start;
-                align-items: end;
+                justify-content: flex-start;
+                align-items: flex-end;
                 margin-bottom: 32px;
 
                 .title {
@@ -574,7 +574,7 @@ body {
 
             .overview {
                 display: flex;
-                justify-content: start;
+                justify-content: flex-start;
                 align-items: center;
                 margin-bottom: 26px;
 
@@ -600,7 +600,7 @@ body {
         nav {
             margin: 36px 0 45px 32px;
             display: flex;
-            justify-content: start;
+            justify-content: flex-start;
             align-items: center;
             margin-bottom: 45px;
 
@@ -672,7 +672,7 @@ body {
                 .score-section {
                     display: flex;
                     align-items: center;
-                    justify-content: start;
+                    justify-content: flex-start;
 
                     .text {
                         font-size: 24px;

@@ -1,5 +1,4 @@
 import React from 'react'
-import vanExample from '../img/van-example.png'
 
 const DashboardVanTile = ({ withButton, van }) => {
     const { name, price, imageUrl,  } = van
@@ -8,7 +7,7 @@ const DashboardVanTile = ({ withButton, van }) => {
         <div className="DashboardVanTile">
             <div className="left">
                 <div className="img-container">
-                    <img src={imageUrl} />
+                    <img src={imageUrl} alt={name} />
                 </div>
 
                 <div className="info">
