@@ -34,7 +34,7 @@ const DashboardVans = ({ withButtons }) => {
           </div>
           {hostVans.length > 0 && <div className="van-tiles">
             {hostVans.map(van => (
-              <Link to={`/host/vans/${van.id}`} style={linkStyle}>
+              <Link to={van.id} style={linkStyle}>
                 <DashboardVanTile key={van.id} van={van} withButton={withButtons} />
               </Link>
             ))}
