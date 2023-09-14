@@ -1,6 +1,6 @@
 import React from 'react'
 import img from "../img/about-img.png"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 
 const About = () => {
@@ -27,9 +27,9 @@ const About = () => {
               </div>
     
 
-              <Link to="/vans">
+              <NavLink to="/vans">
                 <button>Explore our vans</button>
-              </Link>
+              </NavLink>
             </div>
           </div>
         </section>

@@ -1,9 +1,12 @@
 import React from 'react'
-import { Link, useLocation } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 const Header = () => {
-    const location = useLocation()
-    console.log(location.pathname)
+    const activeStyle = {
+        color: "#161616",
+        textDecoration: "underline",
+        fontWeight: "700",
+    }
 
     return (
         <header className="Header">
@@ -11,9 +14,24 @@ const Header = () => {
                 <Link to="/">#VANLIFE</Link>
             </nav>
             <nav className="links">
-                <Link to="/host">Host</Link>
-                <Link to="/about">About</Link>
-                <Link to="/vans">Vans</Link>
+                <NavLink
+                    to="host"
+                    style={({isActive}) => isActive ? activeStyle : null}
+                >
+                    Host
+                </NavLink>
+                <NavLink
+                    to="about"
+                    style={({isActive}) => isActive ? activeStyle : null}
+                >
+                    About
+                </NavLink>
+                <NavLink
+                    to="vans"
+                    style={({isActive}) => isActive ? activeStyle : null}
+                >
+                    Vans
+                </NavLink>
             </nav>
         </header>
     )

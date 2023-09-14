@@ -18,7 +18,7 @@ const VanDetail = () => {
         <>
             {van &&
                 <section className="VanDetail">
-                    <Link to="/vans" className="back" >
+                    <Link to=".." relative="path" className="back" >
                         <BiArrowBack />
                         <span>Back to all vans</span>
                     </Link>

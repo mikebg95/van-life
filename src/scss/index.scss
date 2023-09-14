@@ -43,7 +43,6 @@ body {
     // height: 385px;
     background-color: #FFF7ED;
 
-
     .Header {
         background-color: #FFF7ED;
         width: 100%;
@@ -369,6 +368,337 @@ body {
     .loading {
         margin-left: 28px;
         margin-bottom: 40px;
+    }
+
+    .HostLayout {
+        .details-btn {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            color: #161616;
+            cursor: pointer;
+        }
+
+        .DashboardVans {
+            background-color: #FFF7ED;
+            padding: 38px 28px 53px;
+
+            .top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 30px;
+
+                div {
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 22px;
+                }
+            }
+
+            .van-tiles {
+                .DashboardVanTile {
+                    background-color: white;
+                    padding: 18px 24px;
+                    margin-bottom: 15px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+    
+                    .left {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .img-container {
+                            width: 65px;
+                            height: 65px;
+                            overflow: hidden;
+                            margin-right: 17px;
+    
+                            img {
+                                height: 100%;
+                                position: relative;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                object-fit: cover;
+                            }
+                        }
+    
+                        .info {
+                            .name {
+                                font-size: 20px;
+                                font-weight: 600;
+                                line-height: 32px;
+                            }
+    
+                            .price {
+                                color: #4D4D4D;
+                                font-weight: 500;
+                            }
+                        }
+                    }   
+                }
+            }
+
+            
+        }
+
+        .HostVanDetail {
+            padding-left: 27px;
+
+            .back {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                cursor: pointer;
+                margin-bottom: 37px;
+
+                svg {
+                    color: #858585;
+                    margin-right: 10px;
+                }
+
+                span {
+                    color: #201F1D;
+                    font-weight: 500;
+                    line-height: 23px;
+                    text-decoration: underline;
+                }
+            }
+
+            .content {
+                width: 500px;
+                background-color: white;
+                border-radius: 6px;
+                margin-bottom: 45px;
+                padding: 25px;
+
+                .top {
+                    display: flex;
+                    justify-content: start;
+                    // align-items: center;
+
+                    .img-container {
+                        height: 160px;
+                        width: 160px;
+                        overflow: hidden;
+                        margin-bottom: 25px;
+                        border-radius: 5px;
+
+                        img {
+                            height: 100%;
+                            position: relative;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            object-fit: cover;
+                        }
+                    }
+
+                    .info {
+                        margin-left: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        height: 160px;
+
+                        button {
+                            @include custom-btn(5px, #FFEAD0, #E17654, 14px, 600, 26px, 3px 0);
+                            margin-bottom: 16px;
+                            width: 80px;
+                        }
+
+                        .name {
+                            color: #161616;
+                            font-size: 26px;
+                            font-weight: 700;
+                            line-height: 27px;
+                        }
+
+                        .price {
+                            color: #161616;
+                            font-size: 20px;
+                            font-weight: 700;
+                            line-height: 36px;
+
+                            span {
+                                font-size: 16px;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+
+                nav {
+                    margin: 0 0 30px 0;
+                }
+
+                .HostVanDetailPricing {
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        .Reviews {
+            padding: 0 25px 64px;
+
+            .top {
+                display: flex;
+                justify-content: start;
+                align-items: end;
+                margin-bottom: 32px;
+
+                .title {
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 34px;
+                    margin-right: 15px;
+                    color: #161616;
+                }
+
+                div {
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 22px;
+                    color: #4D4D4D;
+
+                    span {
+                        font-weight: 500;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .overview {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                margin-bottom: 26px;
+
+                .score {
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 22px;
+                    margin-right: 8px;
+                    color: #161616;
+                }
+
+                svg {
+                    color: #FF8C38;
+                    margin-right: 6px;
+                }
+            }
+
+            .charts {
+
+            }
+        }
+
+        nav {
+            margin: 36px 0 45px 32px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin-bottom: 45px;
+
+            a {
+                margin-right: 29px;
+                color: #4D4D4D;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 23px;
+                text-decoration: none;
+
+                &:hover {
+                    @include selected();
+                    font-weight: 700;
+                }
+
+                &.selected {
+                    @include selected();
+                    font-weight: 700;
+                }
+            }
+        }
+        .Dashboard {
+            .dashboard-income {
+                background-color: #FFEAD0;
+                padding: 37px 29px;
+
+                .welcome {
+                    font-size: 36px;
+                    font-weight: 700;
+                    line-height: 22px;
+                    margin-bottom: 32px;
+                }
+
+                .time-section {          
+                    margin-bottom: 31px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    span {
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 22px;
+                        color: #4D4D4D;
+                    }
+
+                    .days {
+                        font-weight: 700;
+                        text-decoration: underline;
+                    }
+                }
+
+                .amount {
+                    color: #161616;
+                    font-size: 48px;
+                    font-weight: 800;
+                    line-height: 38px;
+                }
+            }
+
+            .dashboard-reviews {
+                background-color: #FFDDB2;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 45px 29px;
+
+                .score-section {
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+
+                    .text {
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: 22px;
+                        color: #161616;
+                        margin-right: 12px;
+                    }
+
+                    .rating {
+                        display: flex;
+                        align-items: center;
+                        font-size: 20px;
+
+                        svg {
+                            color: #FF8C38;
+                            margin-right: 3px;
+                        }
+
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
