@@ -15,15 +15,11 @@ const HostVanDetailLayout = () => {
         fontWeight: "700",
     }       
 
-  async function fetchVan() {
+  useEffect(() => { 
     fetch(`/api/host/vans/${id}`)
       .then(res => res.json())
       .then(data => setVan(data.vans[0]))
-  }
-
-  useEffect(() => { 
-    fetchVan()
-  }, [])
+  }, [id])
 
   useEffect(() => {
     console.log(van)
